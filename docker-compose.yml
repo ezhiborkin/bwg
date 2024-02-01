@@ -1,0 +1,78 @@
+version: '3'
+
+services:
+  zookeeper:
+    image: wurstmeister/zookeeper
+    ports:
+      - "2181:2181"
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+    networks:
+      - kafka-net
+
+  kafka:
+    image: wurstmeister/kafka
+    ports:
+      - "9092:9092"
+    expose:
+      - "9093"
+    environment:
+      KAFKA_ADVERTISED_LISTENERS: INSIDE://kafka:9093,OUTSIDE://localhost:9092
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: INSIDE:PLAINTEXT,OUTSIDE:PLAINTEXT
+      KAFKA_LISTENERS: INSIDE://0.0.0.0:9093,OUTSIDE://0.0.0.0:9092
+      KAFKA_INTER_BROKER_LISTENER_NAME: INSIDE
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+    depends_on:
+      - zookeeper
+    networks:
+      - kafka-net
+
+  db:
+    restart: always
+    image: postgres:latest
+    volumes:
+      - ./postgres-datas:/var/lib/postgresql/data
+      - ./sql/create-tabless.sql:/docker-entrypoint-initdb.d/create-tabless.sql
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=qwerty
+    ports:
+      - 5435:5432
+    networks:
+      - kafka-net
+
+  billing:
+    build: ./billing
+    command: >
+      sh -c "while ! ./wait-for-postgres.sh db ./billing -- echo 'PostgreSQL started'; do sleep 1; done && go run cmd/billing/main.go"
+    depends_on:
+      - db
+      - kafka
+      - zookeeper
+    environment:
+      - DB_HOST=db
+      - DB_PORT=5432
+      - DB_NAME=postgres
+      - DB_USER=postgres
+      - DB_PASSWORD=qwerty
+      - CONFIG_PATH=./config/local.yaml
+    ports:
+      - 8082:8082
+    networks:
+      - kafka-net
+
+  gwapi:
+    build: ./gwapi
+    depends_on:
+      - db
+      - kafka
+      - zookeeper
+    environment:
+      - CONFIG_PATH=./config/local.yaml
+    ports:
+      - 8080:8080
+    networks:
+      - kafka-net
+
+networks:
+  kafka-net:
