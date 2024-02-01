@@ -5,6 +5,10 @@ ENV GOPATH=/
 
 COPY ./ ./
 
+# install psql
+RUN apt-get update
+RUN apt-get install -y postgresql-client
+
 # make wait-for-it.sh executable
 RUN chmod +x wait-for-postgres.sh
 

@@ -13,13 +13,21 @@ import (
 )
 
 const (
-	envLocal         = "local"
-	envDev           = "dev"
-	envProd          = "prod"
-	bootstrapServers = "kafka:9093"
-	invoiceTopic     = "invoices"
-	withdrawalTopic  = "withdrawals"
+	envLocal = "local"
+	envDev   = "dev"
+	envProd  = "prod"
 )
+
+// @title Test Task for Golang Developer @bwg
+// @version 1.0
+// @contact github: @ezhiborkin
+
+// @host localhost:8080
+// @BasePath /
+
+// @contact.name   Evgenii Zhiborkin
+// @contact.url    https://t.me/zyltrcuj
+// @contact.email  zhiborkin_ei@mail.ru
 
 func main() {
 	cfg := config.MustLoad()
@@ -44,7 +52,7 @@ func main() {
 	signal.Notify(done, os.Interrupt, syscall.SIGINT, syscall.SIGTERM)
 
 	srv := &http.Server{
-		Addr:        cfg.HTTPServer.Address,
+		Addr:        ":" + cfg.HTTPServer.Address,
 		Handler:     router,
 		ReadTimeout: cfg.HTTPServer.Timeout,
 		IdleTimeout: cfg.HTTPServer.IdleTimeout,

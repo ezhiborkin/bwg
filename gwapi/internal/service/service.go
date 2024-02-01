@@ -31,7 +31,7 @@ func (s *Service) Wallet() (wl.WalletResponse, error) {
 
 	var result wl.WalletResponse
 
-	url := "http://localhost:8082/wallet"
+	url := "http://billing:8081/wallet"
 
 	client := &http.Client{}
 
@@ -40,22 +40,27 @@ func (s *Service) Wallet() (wl.WalletResponse, error) {
 		return wl.WalletResponse{}, fmt.Errorf("%s: %w", op, err)
 	}
 
+	fmt.Println("0")
+
 	resp, err := client.Do(req)
 	if err != nil {
 		return wl.WalletResponse{}, fmt.Errorf("%s: %w", op, err)
 	}
 	defer resp.Body.Close()
 
+	fmt.Println("1")
 	body, err := io.ReadAll(resp.Body)
 	if err != nil {
 		return wl.WalletResponse{}, fmt.Errorf("%s: %w", op, err)
 	}
 
+	fmt.Println("2")
 	err = json.Unmarshal(body, &result)
 	if err != nil {
 		return wl.WalletResponse{}, fmt.Errorf("%s: %w", op, err)
 	}
 
+	fmt.Println("3")
 	return result, nil
 }
 
@@ -163,7 +168,7 @@ func (s *Service) Transaction(id string) (ts.TransactionResponse, error) {
 
 	var result ts.TransactionResponse
 
-	url := "http://localhost:8082/transaction/" + id
+	url := "http://billing:8081/transaction/" + id
 
 	client := &http.Client{}
 

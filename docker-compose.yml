@@ -42,13 +42,14 @@ services:
       - kafka-net
 
   billing:
-    build: ./billing
+    build: 
+      context: ./billing
+      dockerfile: Dockerfile
     command: >
       sh -c "while ! ./wait-for-postgres.sh db ./billing -- echo 'PostgreSQL started'; do sleep 1; done && go run cmd/billing/main.go"
     depends_on:
       - db
       - kafka
-      - zookeeper
     environment:
       - DB_HOST=db
       - DB_PORT=5432
@@ -57,16 +58,16 @@ services:
       - DB_PASSWORD=qwerty
       - CONFIG_PATH=./config/local.yaml
     ports:
-      - 8082:8082
+      - 8081:8081
     networks:
       - kafka-net
 
   gwapi:
-    build: ./gwapi
+    build: 
+      context: ./gwapi
+      dockerfile: Dockerfile
     depends_on:
-      - db
       - kafka
-      - zookeeper
     environment:
       - CONFIG_PATH=./config/local.yaml
     ports:
@@ -76,3 +77,4 @@ services:
 
 networks:
   kafka-net:
+    driver: bridge

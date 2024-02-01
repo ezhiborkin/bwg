@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b0b1d261-8981-4f6a-b851-c78bf404dd80" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/billing/config/local.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/billing/config/local.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/billing/internal/config/config.go" beforeDir="false" afterPath="$PROJECT_DIR$/billing/internal/config/config.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/billing/internal/readers/invoiceReader/invoiceReader.go" beforeDir="false" afterPath="$PROJECT_DIR$/billing/internal/readers/invoiceReader/invoiceReader.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/billing/internal/readers/withdrawReader/withdrawReader.go" beforeDir="false" afterPath="$PROJECT_DIR$/billing/internal/readers/withdrawReader/withdrawReader.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gwapi/cmd/gwapi/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/gwapi/cmd/gwapi/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gwapi/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/gwapi/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gwapi/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/gwapi/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gwapi/internal/http-server/handler/handler.go" beforeDir="false" afterPath="$PROJECT_DIR$/gwapi/internal/http-server/handler/handler.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gwapi/internal/service/service.go" beforeDir="false" afterPath="$PROJECT_DIR$/gwapi/internal/service/service.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/postgres-datas/base/5/1249" beforeDir="false" afterPath="$PROJECT_DIR$/postgres-datas/base/5/1249" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/postgres-datas/base/5/1259" beforeDir="false" afterPath="$PROJECT_DIR$/postgres-datas/base/5/1259" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/postgres-datas/base/5/16384" beforeDir="false" afterPath="$PROJECT_DIR$/postgres-datas/base/5/16384" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/postgres-datas/base/5/16389" beforeDir="false" afterPath="$PROJECT_DIR$/postgres-datas/base/5/16389" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/postgres-datas/base/5/16391" beforeDir="false" afterPath="$PROJECT_DIR$/postgres-datas/base/5/16391" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/postgres-datas/base/5/16393" beforeDir="false" afterPath="$PROJECT_DIR$/postgres-datas/base/5/16393" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/postgres-datas/base/5/16394" beforeDir="false" afterPath="$PROJECT_DIR$/postgres-datas/base/5/16394" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/postgres-datas/base/5/16394_fsm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/postgres-datas/base/5/16394_vm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/postgres-datas/base/5/16400" beforeDir="false" afterPath="$PROJECT_DIR$/postgres-datas/base/5/16400" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/postgres-datas/base/5/16407" beforeDir="false" afterPath="$PROJECT_DIR$/postgres-datas/base/5/16407" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/postgres-datas/base/5/16408" beforeDir="false" afterPath="$PROJECT_DIR$/postgres-datas/base/5/16408" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/postgres-datas/base/5/16414" beforeDir="false" afterPath="$PROJECT_DIR$/postgres-datas/base/5/16414" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/postgres-datas/base/5/2224" beforeDir="false" afterPath="$PROJECT_DIR$/postgres-datas/base/5/2224" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/postgres-datas/base/5/2604" beforeDir="false" afterPath="$PROJECT_DIR$/postgres-datas/base/5/2604" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/postgres-datas/base/5/2606" beforeDir="false" afterPath="$PROJECT_DIR$/postgres-datas/base/5/2606" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/postgres-datas/base/5/2619" beforeDir="false" afterPath="$PROJECT_DIR$/postgres-datas/base/5/2619" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/postgres-datas/base/5/2619_fsm" beforeDir="false" afterPath="$PROJECT_DIR$/postgres-datas/base/5/2619_fsm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/postgres-datas/base/5/2619_vm" beforeDir="false" afterPath="$PROJECT_DIR$/postgres-datas/base/5/2619_vm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/postgres-datas/base/5/2620" beforeDir="false" afterPath="$PROJECT_DIR$/postgres-datas/base/5/2620" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/postgres-datas/base/5/2696" beforeDir="false" afterPath="$PROJECT_DIR$/postgres-datas/base/5/2696" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/postgres-datas/base/5/pg_internal.init" beforeDir="false" afterPath="$PROJECT_DIR$/postgres-datas/base/5/pg_internal.init" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/postgres-datas/global/1260" beforeDir="false" afterPath="$PROJECT_DIR$/postgres-datas/global/1260" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/postgres-datas/global/pg_control" beforeDir="false" afterPath="$PROJECT_DIR$/postgres-datas/global/pg_control" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/postgres-datas/global/pg_internal.init" beforeDir="false" afterPath="$PROJECT_DIR$/postgres-datas/global/pg_internal.init" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/postgres-datas/pg_stat/pgstat.stat" beforeDir="false" afterPath="$PROJECT_DIR$/postgres-datas/pg_stat/pgstat.stat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/postgres-datas/pg_wal/000000010000000000000001" beforeDir="false" afterPath="$PROJECT_DIR$/postgres-datas/pg_wal/000000010000000000000001" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/postgres-datas/pg_xact/0000" beforeDir="false" afterPath="$PROJECT_DIR$/postgres-datas/pg_xact/0000" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="GOROOT" url="file:///opt/homebrew/opt/go/libexec" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 7
+}]]></component>
+  <component name="ProjectId" id="2bkqZt2VfiGhos1FmYA9CF3BE6J" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "RunOnceActivity.go.modules.automatic.dependencies.download": "true",
+    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
+    "git-widget-placeholder": "main",
+    "go.import.settings.migrated": "true",
+    "go.sdk.automatically.set": "true",
+    "last_opened_file_path": "/Users/evgeny",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-gosdk-266795519c66-911b893a1778-org.jetbrains.plugins.go.sharedIndexes.bundled-GO-233.13135.104" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VgoProject">
+    <settings-migrated>true</settings-migrated>
+  </component>
+</project>

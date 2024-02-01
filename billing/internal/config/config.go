@@ -10,14 +10,14 @@ import (
 
 type Config struct {
 	Env            string `yaml:"env" env-default:"local"`
-	DataSourceName string `yaml:"data_source_name" env-default:"postgres://postgres:postgres@localhost:5435/postgres?sslmode=disable"`
+	DataSourceName string `yaml:"data_source_name" env-default:"postgres://postgres:postgres@db:5432/postgres?sslmode=disable"`
 	HTTPServer     `yaml:"http_server"`
 }
 
 type HTTPServer struct {
-	Address     string        `yaml:"address" env-default:"localhost:8082"`
-	Timeout     time.Duration `yaml:"timeout" env-default:"4s"`
-	IdleTimeout time.Duration `yaml:"idle-timeout" env-default:"60s"`
+	Address     string        `yaml:"address"`
+	Timeout     time.Duration `yaml:"timeout"`
+	IdleTimeout time.Duration `yaml:"idle-timeout"`
 }
 
 func MustLoad() *Config {

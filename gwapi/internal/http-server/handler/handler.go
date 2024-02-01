@@ -7,8 +7,8 @@ import (
 	wl "gwapi/internal/lib/wallet"
 	"net/http"
 
-	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
+	// _ "gwapi/docs"
 )
 
 type Handler struct {
@@ -32,13 +32,15 @@ func New(billingWorker BillingWorker) *Handler {
 func (h *Handler) InitRoutes() *gin.Engine {
 	router := gin.New()
 
-	router.Use(cors.Default())
+	// router.Use(cors.Default())
 
 	router.POST("/wallet", h.createWallet)
 	router.GET("/balance/:id", h.getBalance)
 	router.POST("/invoice", h.createInvoice)
 	router.POST("/withdraw", h.createWithdraw)
 	router.GET("/transaction/:id", h.getTransaction)
+
+	// router.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
 
 	return router
 }

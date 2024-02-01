@@ -57,7 +57,7 @@ func main() {
 	signal.Notify(done, os.Interrupt, syscall.SIGINT, syscall.SIGTERM)
 
 	srv := &http.Server{
-		Addr:        cfg.HTTPServer.Address,
+		Addr:        ":" + cfg.HTTPServer.Address,
 		Handler:     router,
 		ReadTimeout: cfg.HTTPServer.Timeout,
 		IdleTimeout: cfg.HTTPServer.IdleTimeout,
