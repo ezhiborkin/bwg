@@ -67,7 +67,7 @@ func (s *Service) Wallet() (wl.WalletResponse, error) {
 func (s *Service) Balance(wallet_id string) (br.BalanceResponse, error) {
 	const op = "service.Balance"
 
-	url := "http://localhost:8081/balance/" + wallet_id
+	url := "http://billing:8081/balance/" + wallet_id
 
 	var result br.BalanceResponse
 
